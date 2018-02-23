@@ -1,0 +1,67 @@
+.container {
+    display: grid;
+    grid-template-columns: 50% auto;
+}
+.head{
+    background: #003a61
+}
+.col {
+    padding: .2em;
+}
+label{
+    padding: 1em;
+    width: 25%;
+    margin-bottom: 2em;
+    cursor: pointer;
+}
+input.txt,.data {
+    border: 2px solid rgb(46, 148, 216);
+    padding: 1em;
+    width: 25%;
+    margin-bottom: 2em;
+}
+
+input.btn {
+    display: block;
+    border: 0;
+    padding: 1em 3em;
+    background: #a5f883;
+    color: rgb(46, 148, 216);
+    margin-bottom: 1em;
+    cursor: pointer;
+}
+
+.life-container {
+    padding: .5em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+th,td {
+    padding: 2%;
+    text-align: center;
+    border: 2px solid;
+    color: rgb(22, 33, 43);
+}
+table {
+    width: 85%;
+    border: 2px;
+    padding: 2%;
+
+}
+button {
+    background: #a5f883;
+    color: rgb(46, 148, 216);
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover {opacity: 1}

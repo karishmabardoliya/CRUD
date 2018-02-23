@@ -1,0 +1,68 @@
+<div class="container-input">
+  <div class="col">
+    <p class="sm">Enter the following fields</p>
+    <form>
+    <label>First name:</label><input type="text" name="fname" class="txt" [(ngModel)]="fname" required="required" placeholder="Enter first name">
+    <br>
+    <label>Last name:</label><input type="text" name="lname" class="txt"[(ngModel)]="lname" required placeholder="Enter last name">
+    <br>
+    <label>DOB:</label><input type="date" name="dob" class="txt" [(ngModel)]="dob" required>
+    <br>
+    <label>Email:</label><input type="email" name="email" class="txt" [(ngModel)]="email" required placeholder="aaa@aa.com">
+    <br>
+    <label>Phone no.:</label><input type="number" name="pno" class="txt" [(ngModel)]="pno" required>
+    <br>
+    <label>Faculty:</label> 
+    <select name="faculty" class="data" [(ngModel)]="fac">
+        <option *ngFor="let pow of f" >{{pow}}</option>
+        </select>
+    <br>
+  
+   <button (click)="add()">submit</button>
+    </form> 
+   </div>
+</div>
+<div>
+  <table>
+    <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>DOB</th>
+    <th>Email</th>
+    <th>Phone no.</th>
+    <th>Faculty</th>
+    </tr>
+    <tr *ngFor="let i of data,let a = index">
+      <td>{{i.fname}}</td>
+      <td>{{i.lname}}</td>
+      <td>{{i.dob}}</td>
+      <td>{{i.email}}</td>
+      <td>{{i.pno}}</td>
+      <td>{{i.fac}}</td>
+      <td><button (click)="removeItem(a)">Delete</button></td>
+      <td><button (click)="edit(a)">Edit</button></td>
+    </tr>
+  </table>
+</div>
+
+<div>
+<form>
+    <label>First name:</label><input type="text" name="fname1" class="txt" [(ngModel)]="fname1" required="required" placeholder="Enter first name">
+    <br>
+    <label>Last name:</label><input type="text" name="lname1" class="txt"[(ngModel)]="lname1" required placeholder="Enter last name">
+    <br>
+    <label>DOB:</label><input type="date" name="dob1" class="txt" [(ngModel)]="dob1" required>
+    <br>
+    <label>Email:</label><input type="email" name="email1" class="txt" [(ngModel)]="email1" required placeholder="aaa@aa.com">
+    <br>
+    <label>Phone no.:</label><input type="number" name="pno1" class="txt" [(ngModel)]="pno1" required>
+    <br>
+    <label>Faculty:</label> 
+    <select name="faculty" class="data" [(ngModel)]="fac1">
+        <option *ngFor="let pow of f" >{{pow}}</option>
+        </select>
+    <br>
+  
+   <button (click)="update()">submit</button>
+</form> 
+</div>
